@@ -8,7 +8,14 @@
 import SwiftUI
 import AppDevWithSwiftLibrary
 
+let cloud = AppDevWithSwiftCloud(appID: "5840ea10-aad4-11eb-bcbc-0242ac130002",
+                                    userID: "5840ec22-aad4-11eb-bcbc-0242ac130002")
+
 struct ContentView: View {
+    struct Zipcode: Hashable, Codable {
+        var location = UUID()
+        var zip = String()
+    }
     var body: some View {
         NavigationView {
             VStack (spacing:3) {

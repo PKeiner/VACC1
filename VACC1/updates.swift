@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+
 import AppDevWithSwiftLibrary
+
 struct updates: View {
     var body: some View {
         VStack{
@@ -26,24 +28,27 @@ struct updates: View {
         VStack {
             
            
-            HStack(alignment: .top, spacing: -1.0) {
-                
+            HStack(alignment: .top, spacing: 2) {
+                            
                 Image("star")
                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                     .aspectRatio(contentMode: .fit)
-                    .padding()
+                    .padding([.bottom], 40.0)
                     .scaledToFit()
-                    .frame(width: 50, height: 80, alignment: .topTrailing)
-                
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .topLeading)
+                    
+                Spacer()
                 Text("Update 4/21/21")
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.leading)
                     .lineLimit(1)
-                    .padding()
+                    .padding(.trailing, 6.0)
+                Spacer(minLength: 10)
                     
             }
+            
                VStack{
                     
                 Text("Johnson and Johnson Vaccine Approved for Use")
