@@ -26,48 +26,28 @@ struct updates: View {
             .padding(.bottom)
             
             VStack {
-                
-                
                 HStack{
-                    
-                    Image("star")
-                        .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                        .aspectRatio(contentMode: .fit)
-                        .padding(.all, 17.0)
-                        .scaledToFit()
-                        .frame(width: 100, height: 100, alignment: .leading)
-                    
-                    Spacer()
-                    Text("")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(1)
-                        .padding(.trailing, 10.0)
-                    Spacer(minLength: 0)
-                    
-                    
-                    NavigationLink(
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 23.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .topLeading)
+                NavigationLink(
                         destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
                         label:
-                            { Text("Update 4/21/21")
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
-                            }).padding()
+                            {
+                               
+                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(5)
+                                    .padding(.horizontal)
+                                
+                            })
 
-                    
                 }
-               
-             
-                
-                
-                VStack{
-                    
-                    Text("Johnson and Johnson Vaccine Approved for Use")
-                        .padding(.trailing)
-                        .foregroundColor (.black)
-                }
-                
+
                 
             }
             .padding(.leading, 50)
@@ -80,6 +60,8 @@ struct updates: View {
             
             
             HStack {
+                
+                
                 Circle()
                     .foregroundColor(.red)
                     .frame(height: 20)

@@ -88,7 +88,7 @@ struct vaccOpportunities: View {
                         .frame(width: 100, height: 100, alignment: .leading)
                     Text("Sports")
                         .foregroundColor(.blue)
-                        .padding(.trailing, 230.0)
+                        .padding(.trailing, 220.0)
                         .frame(height: 110.0)
                 }
                 
@@ -129,10 +129,8 @@ struct vaccOpportunities: View {
     }
 struct vaccOpportunities_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            vaccOpportunities()
-            vaccOpportunities()
-        }
+           vaccOpportunities()
+        
     }
 }
 
