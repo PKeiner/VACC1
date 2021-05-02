@@ -25,7 +25,7 @@ struct Eligibility: View {
     
     
     var body: some View {
-        VStack(alignment: .center){
+        VStack(){
             HStack (alignment: .center){
                 Image(systemName: "person.3.fill")
                     .padding(10.0)
@@ -110,10 +110,12 @@ struct Eligibility: View {
                     
                 }
                 
-                VStack{
-                    NavigationView {
+                VStack(alignment: .trailing) {
+                    
+                
+                    NavigationView{
                         
-                        VStack(alignment: .leading){
+                        VStack{
                             HStack {
                                 
                                 Image("star")
@@ -130,6 +132,7 @@ struct Eligibility: View {
                                         Text("Before Your Appointment")
                                             .font(.title2)
                                     }).padding()
+                                
                                 Image("star")
                                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                                     .aspectRatio(contentMode: .fit)
@@ -139,10 +142,10 @@ struct Eligibility: View {
                                 
                                 
                             }
-                            
-                            
+                            Spacer()
+                            VStack{
                             NavigationLink(
-                                destination: AppWebView(url: URL(string:"https://github.com/")!),
+                                destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
                                 label: {
                                     Text("Johnson and Johnson")
                                     Text("1 shot")
@@ -170,7 +173,10 @@ struct Eligibility: View {
                         
                     }
                     
+                    
+                    Spacer()
                 }
+                .padding()
             }
             
         }
@@ -185,7 +191,7 @@ struct Eligibility: View {
     
     
     
-    
+    }
     
     struct Eligibility_Previews: PreviewProvider {
         static var previews: some View {
