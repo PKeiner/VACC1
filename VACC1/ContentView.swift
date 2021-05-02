@@ -18,49 +18,68 @@ struct ContentView: View {
     }
     var body: some View {
         NavigationView {
-            VStack (spacing:3) {
-              Image("VACC2").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .padding()
-                
-        
-                        Image(systemName: "bandage")
-                        .font(.system(size: 50))
+            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5){
+               
+            
+                Image("VACC2").edgesIgnoringSafeArea(.all)
+                    .padding()
+                ZStack{
+                    
+                Text("*All Chicagoans 16+ can receive the vaccine.*")
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    
+                  
+                    
+                }
                 NavigationLink(
                     destination: Eligibility(),
                     label:
-                        { Text("Eligibility and Vaccine Information")
+                        {
+                            Image(systemName: "bandage")
+                            .font(.system(size: 50))
+                            Text("Eligibility and Vaccine Information")
                             
                         })
                 
-                Image(systemName: "mappin")
-                    .font(.system(size: 50))
+                
                 NavigationLink(
                     destination: locationApp(),
                     label:
-                        { Text("Locations and Appointments").minimumScaleFactor(1.0)
+                        {
+                            Image(systemName: "mappin")
+                                .font(.system(size: 50))
+                            Text("Locations").minimumScaleFactor(1.0)
                             
                         })
                 
                 
-                Image(systemName:"exclamationmark.circle")
-                    .font(.system(size: 50))
+                
                 NavigationLink(
                     destination: updates(),
                     label:
-                        { Text("Updates")
+                        {
+                            Image(systemName:"exclamationmark.circle")
+                                .font(.system(size: 50))
+                            Text("Updates")
                         })
-                Image(systemName:"globe")
-                    .font(.system(size: 50))
+                
+               
                 NavigationLink(
                     destination: vaccOpportunities(),
                     label:
-                        { Text("Vaccinated Opportunities")
+                        {
+                            Image(systemName:"globe")
+                                .font(.system(size: 50))
+                            Text("Vaccinated Opportunities")
                         })
             }
             
             
             
         }
+        .padding(.all)
     }
 }
 

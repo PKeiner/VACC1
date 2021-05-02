@@ -25,38 +25,50 @@ struct updates: View {
             }
             .padding(.bottom)
             
-        VStack {
-            
-           
-            HStack(alignment: .top, spacing: 2) {
-                            
-                Image("star")
-                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                    .aspectRatio(contentMode: .fit)
-                    .padding([.bottom], 40.0)
-                    .scaledToFit()
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .topLeading)
+            VStack {
+                
+                
+                HStack{
                     
-                Spacer()
-                Text("Update 4/21/21")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.black)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(1)
-                    .padding(.trailing, 6.0)
-                Spacer(minLength: 10)
+                    Image("star")
+                        .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all, 17.0)
+                        .scaledToFit()
+                        .frame(width: 100, height: 100, alignment: .leading)
                     
-            }
-            
-               VStack{
+                    Spacer()
+                    Text("")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(1)
+                        .padding(.trailing, 10.0)
+                    Spacer(minLength: 0)
                     
-                Text("Johnson and Johnson Vaccine Approved for Use")
-                     .padding(.trailing)
-                    .foregroundColor (.black)
+                    
+                    NavigationLink(
+                        destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                        label:
+                            { Text("Update 4/21/21")
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
+                            }).padding()
+
+                    
+                }
+               
+             
+                
+                
+                VStack{
+                    
+                    Text("Johnson and Johnson Vaccine Approved for Use")
+                        .padding(.trailing)
+                        .foregroundColor (.black)
                 }
                 
-                    
+                
             }
             .padding(.leading, 50)
             .padding(.all,25.0)
@@ -119,11 +131,11 @@ struct updates: View {
 
 
 
-    
+
 
 struct updates_Previews: PreviewProvider {
     static var previews: some View {
         updates()
     }
 }
-    
+

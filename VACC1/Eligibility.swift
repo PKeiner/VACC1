@@ -25,8 +25,8 @@ struct Eligibility: View {
     
     
     var body: some View {
-        VStack{
-            HStack {
+        VStack(alignment: .center){
+            HStack (alignment: .center){
                 Image(systemName: "person.3.fill")
                     .padding(10.0)
                 
@@ -35,43 +35,63 @@ struct Eligibility: View {
                     Text("Eligibity and Vaccine Information")
                         .foregroundColor(.white).bold()
                 }
-                
-                
             }
-            
-            Text("All Chicagoans 16 and older can receive the vaccine.")
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-            Text("CITY VACCINE SITE ELIGIBILITY.")
+            HStack{
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.leading, 17.0)
+                    .scaledToFit()
+                    .frame(width: 50, height: 50, alignment: .leading)
+            Text("CITY VACCINE SITE  INFORMATION")
+               
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding()
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.leading, 17.0)
+                    .scaledToFit()
+                    .frame(width: 50, height: 50, alignment: .leading)
+            }
+            NavigationLink(
+                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/united-center.html")!),
+                label: {
+                    Text("United Center Location")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .font(.body)
+                        .fontWeight(.bold)
+                    Text("Drive Thru Only, ASL,ADA Assistance, ")
+                }).padding()
             
-            Text("United Center Location")
-                .multilineTextAlignment(.center)
+            
+           
             Spacer()
-            ZStack {
-                
-                
-                Text("Enter your Zip Code")
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                TextField("Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant(""))
-                
-                
-                
-                
-            }
+           
+            NavigationLink(
+                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/chicago-state.html")!),
+                label: {
+                    Text("Chicago State University")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .font(.body)
+                        .fontWeight(.bold)
+                       
+                    
+                    Text("Walk-Up")
+                        
+                }).padding()
+      
+            NavigationLink(
+                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/american-airlines-conference-center.html")!),
+                label: {
+                    Text("American Airlines Conference Center")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .font(.body)
+                        .fontWeight(.bold)
+                    Text("Walk-Ins, ADA Assistance, ASL")
+                }).padding()
             
-            Text("Chicago State University")
-            ZStack {
-                
-                Text("Enter your Zip Code")
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    .multilineTextAlignment(.center)
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-            }
-            Text("American Airlines Conference Center at Gallagher Way Nexy to Wrigley  Field ")
-                .multilineTextAlignment(.center)
             
             
             
@@ -88,12 +108,38 @@ struct Eligibility: View {
                         
                     }
                     
-                    
                 }
                 
                 VStack{
                     NavigationView {
+                        
                         VStack(alignment: .leading){
+                            HStack {
+                                
+                                Image("star")
+                                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.leading, 17.0)
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50, alignment: .leading)
+                                
+                                
+                                NavigationLink(
+                                    destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
+                                    label: {
+                                        Text("Before Your Appointment")
+                                            .font(.title2)
+                                    }).padding()
+                                Image("star")
+                                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding(.leading, 17.0)
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50, alignment: .leading)
+                                
+                                
+                            }
+                            
                             
                             NavigationLink(
                                 destination: AppWebView(url: URL(string:"https://github.com/")!),
@@ -101,6 +147,8 @@ struct Eligibility: View {
                                     Text("Johnson and Johnson")
                                     Text("1 shot")
                                 }).padding()
+                            
+                            
                             
                             NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Moderna.html")!),
                                              label: {
@@ -112,7 +160,10 @@ struct Eligibility: View {
                                                 Text("Pfizer")
                                                 Text("2 shots- 21 days apart")
                                              }).padding()
-                            Spacer()
+                      
+                         
+                            
+                            
                             
                         }
                         
