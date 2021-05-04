@@ -130,8 +130,9 @@ struct Eligibility: View {
                                     destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
                                     label: {
                                         Text("Before Your Appointment")
-                                            .font(.title2)
-                                    }).padding()
+                                            .font(.body)
+                                    }).padding(5)
+                            
                                 
                                 Image("star")
                                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))

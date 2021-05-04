@@ -27,7 +27,9 @@ struct locationApp: View {
                         .foregroundColor(.white).bold()
                     Spacer()
                 }
-                
+                    
+                    
+                    
             }
             
             VStack {
