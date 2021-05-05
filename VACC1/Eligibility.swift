@@ -113,7 +113,7 @@ struct Eligibility: View {
                 VStack(alignment: .trailing) {
                     
                 
-                    NavigationView{
+                  
                         
                         VStack{
                             HStack {
@@ -200,4 +200,4 @@ struct Eligibility: View {
         }
     }
     
-}
+

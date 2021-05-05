@@ -10,28 +10,24 @@ import AppDevWithSwiftLibrary
 
 struct vaccOpportunities: View {
     var body: some View {
-        NavigationView {
+        
             
-            VStack{
+        VStack{
+        HStack (alignment: .center){
                 
-                HStack{
-                    Image("opportunity")
-                    
-                    
-                    
-                    ZStack{
-                        Image("header")
-                        Text("Vaccinated Opportunities")
-                            .foregroundColor(.white).bold()
-                        
-                    }
-                    
-                }
+                    Image(systemName:"globe")
+                    .font(.system(size: 50))
                 
+                ZStack{
+                    Image("header")
+                    Text("Vaccinated Opportunities")
+                        .foregroundColor(.white).bold()
+                }.padding()
+            }
                 
                 VStack {
                     
-                    Rectangle()
+                    
                     HStack {
                         Image("star")
                             .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -42,7 +38,7 @@ struct vaccOpportunities: View {
                         NavigationLink(
                             destination: travel(),
                             label:
-                                { Text("Travel Opportunities").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
+                                { Text("Travel").foregroundColor(.blue).lineLimit(3)
                                     .padding(.trailing)
                                     
                                 })
@@ -61,7 +57,7 @@ struct vaccOpportunities: View {
                     
                 }
                 
-                Rectangle()
+                
                 HStack {
                     Image("star")
                         .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -71,12 +67,16 @@ struct vaccOpportunities: View {
                         .frame(width: 100, height: 100, alignment: .leading)
                     
                     NavigationLink(
-                        destination: travel(),
+                        destination: AppWebView(url:URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
                         label:
-                            { Text("Kids").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
+                            { Text("Dining").foregroundColor(.blue).lineLimit(3)
                                 .padding(.trailing)
                                 
                             })
+                    
+                    
+                    
+                    
                     
                     //                    Text("Kids")
                     //                        .foregroundColor(.blue)
@@ -86,7 +86,7 @@ struct vaccOpportunities: View {
                     
                 }
                 
-                Rectangle()
+                
                 HStack {
                     Image("star")
                         .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -98,7 +98,7 @@ struct vaccOpportunities: View {
                     NavigationLink(
                         destination: travel(),
                         label:
-                            { Text("Sports").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
+                            { Text("Sports").foregroundColor(.blue).lineLimit(3)
                                 .padding(.trailing)
                                 
                             })
@@ -111,7 +111,7 @@ struct vaccOpportunities: View {
                     //                       .frame(height: 100.0)
                 }
                 
-                Rectangle()
+                
                 HStack {
                     Image("star")
                         .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -123,18 +123,35 @@ struct vaccOpportunities: View {
                     NavigationLink(
                         destination: travel(),
                         label:
-                            { Text("Food and Drink ").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).lineLimit(3)
+                            { Text("Kids ").foregroundColor(.blue).lineLimit(3)
                                 .padding(.trailing)
                                 
                             })
-                    //                    Text("Beauty")
-                    //                       .foregroundColor(.blue)
-                    //                        .multilineTextAlignment(.leading)
-                    //                        .padding(.trailing, 220.0)
-                    //                        .frame(height: 100.0)
                 }
+                HStack {
+                    Image("star")
+                        .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.all, 17.0)
+                        .scaledToFit()
+                        .frame(width: 100, height: 100, alignment: .leading)
+                    
+                    NavigationLink(
+                        destination: travel(),
+                        label:
+                            { Text("Beauty ").foregroundColor(.blue).lineLimit(3)
+                                .padding(.trailing)
+                                
+                            })
+                }
+                //                    Text("Beauty")
+                //                       .foregroundColor(.blue)
+                //                        .multilineTextAlignment(.leading)
+                //                        .padding(.trailing, 220.0)
+                //                        .frame(height: 100.0)
                 
-     
+                
+                
             }
             
             
@@ -150,4 +167,4 @@ struct vaccOpportunities: View {
     
     
     
-}
+
