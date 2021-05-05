@@ -21,12 +21,21 @@ struct locationApp: View {
                         .font(.system(size: 50))
                     
                 
-                ZStack{
-                    Image("header")
-                    Text("Locations")
-                        .foregroundColor(.white).bold()
+              
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .foregroundColor(.blue)
+                            .frame(height: 40)
+     //                   Image("header")
+                        Text("Locations")
+                            .foregroundColor(.white).bold()
+                        
+                        
+                    }.padding(.horizontal)
+
                     Spacer()
-                }
+                
                     
                     
                     
@@ -41,6 +50,9 @@ struct locationApp: View {
                 
             }
             .padding()
+                
+                Spacer()
+                }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
         }
     }
 
@@ -51,4 +63,4 @@ struct locationApp: View {
     }
     //https://data.cityofchicago.org/d/4shi-izjg
     
-}
+

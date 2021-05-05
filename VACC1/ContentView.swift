@@ -9,7 +9,7 @@ import SwiftUI
 import AppDevWithSwiftLibrary
 
 let cloud = AppDevWithSwiftCloud(appID: "5840ea10-aad4-11eb-bcbc-0242ac130002",
-                                    userID: "5840ec22-aad4-11eb-bcbc-0242ac130002")
+                                 userID: "5840ec22-aad4-11eb-bcbc-0242ac130002")
 
 struct ContentView: View {
     struct Zipcode: Hashable, Codable {
@@ -18,27 +18,25 @@ struct ContentView: View {
     }
     var body: some View {
         NavigationView {
-            VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 5){
-               
-            
+            VStack(alignment: .leading, spacing: 5){
+                
+                
                 Image("VACC2").edgesIgnoringSafeArea(.all)
                     .padding()
-                ZStack{
-                    
+                Spacer()
+                
                 Text("*All Chicagoans 16+ can receive the vaccine.*")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    
-                  
-                    
-                }
+                Spacer() 
+                
                 NavigationLink(
                     destination: Eligibility(),
                     label:
                         {
                             Image(systemName: "bandage")
-                            .font(.system(size: 50))
+                                .font(.system(size: 50))
                             Text("Eligibility and Vaccine Information")
                             
                         })
@@ -49,7 +47,9 @@ struct ContentView: View {
                     label:
                         {
                             Image(systemName: "mappin")
-                                .font(.system(size: 50))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
                             Text("Locations").minimumScaleFactor(1.0)
                             
                         })
@@ -65,7 +65,7 @@ struct ContentView: View {
                             Text("Updates")
                         })
                 
-               
+                
                 NavigationLink(
                     destination: vaccOpportunities(),
                     label:
@@ -74,12 +74,15 @@ struct ContentView: View {
                                 .font(.system(size: 50))
                             Text("Vaccinated Opportunities")
                         })
-            }
+                
+                Spacer()
+            }.navigationBarTitle(Text(""),displayMode: .inline)
             
             
-            
+               
         }.navigationViewStyle(StackNavigationViewStyle())
-//        .padding(.all)
+        
+        .padding(.horizontal)
     }
 }
 

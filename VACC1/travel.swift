@@ -19,16 +19,18 @@ struct travel: View {
             VStack{
                 HStack{
                     Image("opportunity")
-                        .padding(.trailing, 13.0)
+                        .padding(.horizontal)
                     
                     ZStack{
-                        Image("header")
-                            .frame(height: nil)
-                        Text("Travel Advisories")
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .foregroundColor(.blue)
+                            .frame(height: 40)
+     //                   Image("header")
+                        Text("Travel")
                             .foregroundColor(.white).bold()
-                            .padding(0.0)
                         
-                    }
+                        
+                    }.padding(.horizontal)
                     
                 }
                 
@@ -69,6 +71,9 @@ struct travel: View {
             
             
             Spacer()
+            
+          
+            }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
         }
     }
     
@@ -79,4 +84,4 @@ struct travel: View {
         
         
     }
-}
+

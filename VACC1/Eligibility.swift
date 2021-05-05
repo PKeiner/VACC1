@@ -31,10 +31,13 @@ struct Eligibility: View {
                     .padding(10.0)
                 
                 ZStack{
-                    Image("header")
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(.blue)
+                        .frame(height: 40)
+ //                   Image("header")
                     Text("Eligibity and Vaccine Information")
                         .foregroundColor(.white).bold()
-                }
+                }.padding(.horizontal)
             }
             HStack{
                 Image("star")
@@ -95,7 +98,7 @@ struct Eligibility: View {
             
             
             
-            VStack {
+            VStack (alignment: .leading){
                 
                 HStack {
                    Image(systemName: "bandage")
@@ -185,8 +188,8 @@ struct Eligibility: View {
                 }
                 .padding()
             }
-            
-        }
+            Spacer()
+        }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
         
         
         

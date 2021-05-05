@@ -17,11 +17,15 @@ struct updates: View {
                     .padding(10.0)
                 
                 ZStack{
-                    Image("header")
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(.blue)
+                        .frame(height: 40)
+ //                   Image("header")
                     Text("Updates")
                         .foregroundColor(.white).bold()
                     
-                }
+                    
+                }.padding(.horizontal)
             }
             .padding(.bottom)
             
@@ -101,7 +105,10 @@ struct updates: View {
             .border(Color.gray)
             .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/))
             .foregroundColor(.gray)
-        }
+        Spacer()
+    }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
+        
+        
     }
 }
 

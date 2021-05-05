@@ -17,14 +17,25 @@ struct vaccOpportunities: View {
                 
                 Image(systemName:"globe")
                     .font(.system(size: 50))
+                    .padding()
+                
+                
                 
                 ZStack{
-                    Image("header")
+                    
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(.blue)
+                        .frame(height: 40)
+                        .padding()
+                    
+//                    Image("header")
                     Text("Vaccinated Opportunities")
                         .foregroundColor(.white).bold()
-                }.padding()
+                }.padding(.horizontal)
             }
             
+            
+            Spacer()
             VStack {
                 
                 
@@ -39,7 +50,7 @@ struct vaccOpportunities: View {
                         destination: travel(),
                         label:
                             { Text("Travel").foregroundColor(.blue).lineLimit(3)
-                                .padding(.trailing)
+                                .frame(width: 150)
                                 
                             })
                     //                    Text("Travel Opportunities and Restrictions")
@@ -71,7 +82,7 @@ struct vaccOpportunities: View {
                     label:
                         { Text("Dining").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
-                            .background(Color.yellow)
+                          
                             
                             
                         })
@@ -102,7 +113,7 @@ struct vaccOpportunities: View {
                     destination: travel(),
                     label:
                         { Text("Sports").foregroundColor(.blue).lineLimit(3)
-                            .padding(.trailing)
+                            .frame(width: 150)
                             
                         })
                 
@@ -127,7 +138,7 @@ struct vaccOpportunities: View {
                     destination: travel(),
                     label:
                         { Text("Kids ").foregroundColor(.blue).lineLimit(3)
-                            .padding(.trailing)
+                            .frame(width: 150)
                             
                         })
             }
@@ -143,7 +154,7 @@ struct vaccOpportunities: View {
                     destination: travel(),
                     label:
                         { Text("Beauty ").foregroundColor(.blue).lineLimit(3)
-                            .padding(.trailing)
+                            .frame(width: 150)
                             
                         })
             }
