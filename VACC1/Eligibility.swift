@@ -25,7 +25,7 @@ struct Eligibility: View {
     
     
     var body: some View {
-        VStack(){
+        VStack(alignment: .leading){
             HStack (alignment: .center){
                 Image(systemName: "person.3.fill")
                     .padding(10.0)
@@ -43,11 +43,11 @@ struct Eligibility: View {
                     .padding(.leading, 17.0)
                     .scaledToFit()
                     .frame(width: 50, height: 50, alignment: .leading)
-            Text("CITY VACCINE SITE  INFORMATION")
-               
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding()
+                Text("CITY VACCINE SITE  INFORMATION")
+                    
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
                 Image("star")
                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                     .aspectRatio(contentMode: .fit)
@@ -66,9 +66,9 @@ struct Eligibility: View {
                 }).padding()
             
             
-           
+            
             Spacer()
-           
+            
             NavigationLink(
                 destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/chicago-state.html")!),
                 label: {
@@ -76,12 +76,12 @@ struct Eligibility: View {
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                         .font(.body)
                         .fontWeight(.bold)
-                       
+                    
                     
                     Text("Walk-Up")
-                        
+                    
                 }).padding()
-      
+            
             NavigationLink(
                 destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/american-airlines-conference-center.html")!),
                 label: {
@@ -98,53 +98,59 @@ struct Eligibility: View {
             VStack {
                 
                 HStack {
-                    Image(systemName: "bandage")
-                        .padding(.horizontal)
-                    
+                   Image(systemName: "bandage")
+                        .resizable()
+                        .scaledToFit()
+                    .frame(width: 50)
+                    .padding()
+                        .cornerRadius(5.0)
                     ZStack {
-                        Image("header")
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .foregroundColor(.blue)
+                            .frame(height: 40)
+ //                       Image("header")
                         Text("Vaccine Information")
                             .foregroundColor(.white).bold()
                         
                     }
                     
-                }
+                }.padding(.horizontal)
                 
                 VStack(alignment: .trailing) {
                     
-                
-                  
-                        
-                        VStack{
-                            HStack {
-                                
-                                Image("star")
-                                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.leading, 17.0)
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50, alignment: .leading)
-                                
-                                
-                                NavigationLink(
-                                    destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
-                                    label: {
-                                        Text("Before Your Appointment")
-                                            .font(.body)
-                                    }).padding(5)
+                    
+                    
+                    
+                    VStack{
+                        HStack {
                             
-                                
-                                Image("star")
-                                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                                    .aspectRatio(contentMode: .fit)
-                                    .padding(.leading, 17.0)
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 50, alignment: .leading)
-                                
-                                
-                            }
-                            Spacer()
-                            VStack{
+                            Image("star")
+                                .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.leading, 17.0)
+                                .scaledToFit()
+                                .frame(width: 50, height: 50, alignment: .leading)
+                            
+                            
+                            NavigationLink(
+                                destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
+                                label: {
+                                    Text("Before Your Appointment")
+                                        .font(.body)
+                                }).padding(5)
+                            
+                            
+                            Image("star")
+                                .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.leading, 17.0)
+                                .scaledToFit()
+                                .frame(width: 50, height: 50, alignment: .leading)
+                            
+                            
+                        }
+                        Spacer()
+                        VStack(alignment: .leading){
                             NavigationLink(
                                 destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
                                 label: {
@@ -164,8 +170,8 @@ struct Eligibility: View {
                                                 Text("Pfizer")
                                                 Text("2 shots- 21 days apart")
                                              }).padding()
-                      
-                         
+                            
+                            
                             
                             
                             
@@ -192,12 +198,12 @@ struct Eligibility: View {
     
     
     
+}
+
+struct Eligibility_Previews: PreviewProvider {
+    static var previews: some View {
+        Eligibility()
     }
-    
-    struct Eligibility_Previews: PreviewProvider {
-        static var previews: some View {
-            Eligibility()
-        }
-    }
-    
+}
+
 
