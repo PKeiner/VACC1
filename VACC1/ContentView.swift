@@ -78,8 +78,8 @@ struct ContentView: View {
             
             
             
-        }
-        .padding(.all)
+        }.navigationViewStyle(StackNavigationViewStyle())
+//        .padding(.all)
     }
 }
 
