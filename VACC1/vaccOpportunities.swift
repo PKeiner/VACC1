@@ -25,7 +25,7 @@ struct vaccOpportunities: View {
                     
                     RoundedRectangle(cornerRadius: 5.0)
                         .foregroundColor(.blue)
-                        .frame(height: 40)
+                        .frame(height: 50)
                         .padding()
                     
 //                    Image("header")
@@ -153,10 +153,33 @@ struct vaccOpportunities: View {
                 NavigationLink(
                     destination: travel(),
                     label:
+                        { Text("Concerts ").foregroundColor(.blue).lineLimit(3)
+                            .frame(width: 150)
+                            
+                        })
+            }
+
+            
+            HStack {
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 17.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .leading)
+                
+                NavigationLink(
+                    destination: travel(),
+                    label:
                         { Text("Beauty ").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
                             
                         })
+                
+                
+                
+                
+                
             }
             //                    Text("Beauty")
             //                       .foregroundColor(.blue)

@@ -26,92 +26,20 @@ struct Eligibility: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            HStack (alignment: .center){
-                Image(systemName: "person.3.fill")
-                    .padding(10.0)
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 5.0)
-                        .foregroundColor(.blue)
-                        .frame(height: 40)
- //                   Image("header")
-                    Text("Eligibity and Vaccine Information")
-                        .foregroundColor(.white).bold()
-                }.padding(.horizontal)
-            }
-            HStack{
-                Image("star")
-                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.leading, 17.0)
-                    .scaledToFit()
-                    .frame(width: 50, height: 50, alignment: .leading)
-                Text("CITY VACCINE SITE  INFORMATION")
-                    
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                Image("star")
-                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.leading, 17.0)
-                    .scaledToFit()
-                    .frame(width: 50, height: 50, alignment: .leading)
-            }
-            NavigationLink(
-                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/united-center.html")!),
-                label: {
-                    Text("United Center Location")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        .font(.body)
-                        .fontWeight(.bold)
-                    Text("Drive Thru Only, ASL,ADA Assistance, ")
-                }).padding()
-            
-            
-            
-            Spacer()
-            
-            NavigationLink(
-                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/chicago-state.html")!),
-                label: {
-                    Text("Chicago State University")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        .font(.body)
-                        .fontWeight(.bold)
-                    
-                    
-                    Text("Walk-Up")
-                    
-                }).padding()
-            
-            NavigationLink(
-                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/american-airlines-conference-center.html")!),
-                label: {
-                    Text("American Airlines Conference Center")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        .font(.body)
-                        .fontWeight(.bold)
-                    Text("Walk-Ins, ADA Assistance, ASL")
-                }).padding()
-            
-            
-            
-            
             VStack (alignment: .leading){
                 
                 HStack {
-                   Image(systemName: "bandage")
+                    Image(systemName: "bandage")
                         .resizable()
                         .scaledToFit()
-                    .frame(width: 50)
-                    .padding()
+                        .frame(width: 50)
+                        .padding()
                         .cornerRadius(5.0)
                     ZStack {
                         RoundedRectangle(cornerRadius: 5.0)
                             .foregroundColor(.blue)
                             .frame(height: 40)
- //                       Image("header")
+                        //                       Image("header")
                         Text("Vaccine Information")
                             .foregroundColor(.white).bold()
                         
@@ -119,82 +47,96 @@ struct Eligibility: View {
                     
                 }.padding(.horizontal)
                 
-                VStack(alignment: .trailing) {
+                VStack(alignment: .center){
                     
-                    
-                    
-                    
-                    VStack{
-                        HStack {
-                            
-                            Image("star")
-                                .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.leading, 17.0)
-                                .scaledToFit()
-                                .frame(width: 50, height: 50, alignment: .leading)
-                            
-                            
-                            NavigationLink(
-                                destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
-                                label: {
-                                    Text("Before Your Appointment")
-                                        .font(.body)
-                                }).padding(5)
-                            
-                            
-                            Image("star")
-                                .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.leading, 17.0)
-                                .scaledToFit()
-                                .frame(width: 50, height: 50, alignment: .leading)
-                            
-                            
-                        }
-                        Spacer()
-                        VStack(alignment: .leading){
-                            NavigationLink(
-                                destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
-                                label: {
-                                    Text("Johnson and Johnson")
-                                    Text("1 shot")
-                                }).padding()
-                            
-                            
-                            
-                            NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Moderna.html")!),
-                                             label: {
-                                                Text("Moderna")
-                                                Text("2 shots- 21 days apart")
-                                             }).padding()
-                            NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/vaccines/covid-19/info-by-product/pfizer/pfizer-bioNTech-faqs.html")!),
-                                             label: {
-                                                Text("Pfizer")
-                                                Text("2 shots- 21 days apart")
-                                             }).padding()
-                            
-                            
-                            
-                            
-                            
-                        }
+                
+                    HStack{
+                        
+                       
+                        
+                        
+                        NavigationLink(
+                            destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
+                            label: {
+                                Text("Before Your Appointment")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    .font(.title2)
+                            }).padding(.horizontal)
+                        
+                        
+                        
                         
                         
                     }
-                    
-                    
-                    Spacer()
+                   
+                    VStack(alignment: .center){
+                        NavigationLink(
+                            destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                            label: {
+                                Text("Johnson and Johnson")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                Text("1 shot")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            }).padding()
+                        
+                        
+                        
+                        NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Moderna.html")!),
+                                         label: {
+                                            Text("Moderna").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                            Text("2 shots- 21 days apart").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                         }).padding()
+                        NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Pfizer-BioNTech.html")!),
+                                         label: {
+                                            Text("Pfizer").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                            Text("2 shots- 21 days apart").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                            
+                                         }).padding()
+                        
+                        
+                        
+                        SwiftUIWebView(url: URL(string: "https://coronavirus.illinois.gov/s/vaccine-faqs")!)
+                            .padding(10)
+                        
+//
+                        
+                        
+                        
+                        
+                        
+                    }
+                    .padding()
                 }
-                .padding()
-            }
-            Spacer()
-        }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
-        
-        
-        
-        
-        
+                Spacer()
+            }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    struct Eligibility_Previews: PreviewProvider {
+        static var previews: some View {
+            Eligibility()
+        }
     }
     
     
@@ -202,11 +144,3 @@ struct Eligibility: View {
     
     
 }
-
-struct Eligibility_Previews: PreviewProvider {
-    static var previews: some View {
-        Eligibility()
-    }
-}
-
-

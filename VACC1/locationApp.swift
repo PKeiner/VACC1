@@ -36,22 +36,50 @@ struct locationApp: View {
 
                     Spacer()
                 
-                    
+                  
                     
                     
             }
             
             VStack {
+                Text("Search by vaccine.")
+                    .font(.title2)
                 
-                
-            SwiftUIWebView(url: URL(string: "https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!)
+            SwiftUIWebView(url: URL(string: "https://www.vaccines.gov/search/")!)
                 .padding(10)
                 
                 
             }
             .padding()
                 
+                
+                VStack{
+                HStack (alignment: .center){
+                    Image(systemName: "mappin")
+                        .font(.system(size: 50))
+                        .foregroundColor(.blue)
+                        .padding(10.0)
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .foregroundColor(.yellow)
+                            .frame(height: 40)
+                        //                   Image("header")
+                        NavigationLink(
+                            destination: cityVacc(),
+                            label:
+                                {
+                                   
+                                    Text("City Vaccine Sites")
+                                        .foregroundColor(.blue).bold()
+                                })
+                        
+                            
+                    }.padding(.horizontal)
+                }
+                }
                 Spacer()
+                
                 }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
         }
     }

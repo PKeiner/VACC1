@@ -37,7 +37,7 @@ struct ContentView: View {
                         {
                             Image(systemName: "bandage")
                                 .font(.system(size: 50))
-                            Text("Eligibility and Vaccine Information")
+                            Text("Vaccine Information")
                             
                         })
                 

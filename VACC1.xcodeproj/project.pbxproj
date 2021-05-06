@@ -19,6 +19,7 @@
 		C3AB593A2630731C006296C0 /* travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AB59392630731C006296C0 /* travel.swift */; };
 		C3E6B8572635944A00A899B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3E6B8592635944A00A899B3 /* Localizable.strings */; };
 		C3E6B8622638D08500A899B3 /* AppDevWithSwiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = C3E6B8612638D08500A899B3 /* AppDevWithSwiftLibrary */; };
+		C3F891D026438F500005C054 /* cityVacc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F891CF26438F500005C054 /* cityVacc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C3AB59392630731C006296C0 /* travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travel.swift; sourceTree = "<group>"; };
 		C3E6B8582635944A00A899B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C3E6B85C2635967000A899B3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C3F891CF26438F500005C054 /* cityVacc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityVacc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				C3E6B8592635944A00A899B3 /* Localizable.strings */,
 				C3AB592C263071F5006296C0 /* Eligibility.swift */,
 				C3AB592F2630727B006296C0 /* locationApp.swift */,
+				C3F891CF26438F500005C054 /* cityVacc.swift */,
 				C3AB593226307306006296C0 /* vaccOpportunities.swift */,
 				C3AB593526307312006296C0 /* updates.swift */,
 				C3733ABA263E144000046E98 /* AppWebView.swift */,
@@ -174,6 +177,7 @@
 				C3AB593626307312006296C0 /* updates.swift in Sources */,
 				C3AB593A2630731C006296C0 /* travel.swift in Sources */,
 				C3AB592D263071F5006296C0 /* Eligibility.swift in Sources */,
+				C3F891D026438F500005C054 /* cityVacc.swift in Sources */,
 				C3AB591E26306F8E006296C0 /* ContentView.swift in Sources */,
 				C3AB593326307306006296C0 /* vaccOpportunities.swift in Sources */,
 				C3733ABB263E144000046E98 /* AppWebView.swift in Sources */,

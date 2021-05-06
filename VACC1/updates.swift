@@ -17,15 +17,12 @@ struct updates: View {
                     .padding(10.0)
                 
                 ZStack{
-                    RoundedRectangle(cornerRadius: 5.0)
-                        .foregroundColor(.blue)
-                        .frame(height: 40)
- //                   Image("header")
+                    Image("header")
                     Text("Updates")
                         .foregroundColor(.white).bold()
                     
                     
-                }.padding(.horizontal)
+                }
             }
             .padding(.bottom)
             
@@ -63,50 +60,112 @@ struct updates: View {
             
             
             
-            HStack {
-                
-                
-                Circle()
-                    .foregroundColor(.red)
-                    .frame(height: 20)
-                    .frame(width: 20, height: 20)
-                Text ("Update 4/23/21")
-                    .padding ()
-                    .foregroundColor(.black)
-            } .padding(.horizontal, 100)
-            .padding(.vertical,30)
-            .border(Color.gray)
-            .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/))
-            .foregroundColor(.gray)
-            HStack {
-                Circle()
-                    .foregroundColor(.red)
-                    .frame(height: 20)
-                    .frame(width: 20, height: 20)
-                Text ("Update 4/25/21")
-                    .padding ()
-                    .foregroundColor(.black)
+            
+            
+            
+            
+        VStack {
+            HStack{
+            Image("star")
+                .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                .aspectRatio(contentMode: .fit)
+                .padding(.all, 23.0)
+                .scaledToFit()
+                .frame(width: 100, height: 100, alignment: .topLeading)
+            NavigationLink(
+                    destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                    label:
+                        {
+                           
+                            Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(5)
+                                .padding(.horizontal)
+                            
+                        })
+
             }
-            .padding(.horizontal, 100)
-            .padding(.vertical,30)
-            .border(Color.gray)
-            .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/))
-            .foregroundColor(.gray)
-            HStack {
-                Circle()
-                    .foregroundColor(.red)
-                    .frame(height: 20)
-                    .frame(width: 20, height: 20)
-                Text ("Update 4/27/21")
-                    .padding ()
-                    .foregroundColor(.black)
-            } .padding(.horizontal, 100)
-            .padding(.vertical,30)
-            .border(Color.gray)
-            .background(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/))
-            .foregroundColor(.gray)
-        Spacer()
-    }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
+
+            
+        }
+        .padding(.leading, 50)
+        .padding(.all,25.0)
+        
+        .background(RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0))
+        .foregroundColor(Color(red: 0.649, green: 0.807, blue: 0.883))
+        
+            VStack {
+                HStack{
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 23.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .topLeading)
+                NavigationLink(
+                        destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                        label:
+                            {
+                               
+                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(5)
+                                    .padding(.horizontal)
+                                
+                            })
+
+                }
+
+                
+            }
+            .padding(.leading, 50)
+            .padding(.all,25.0)
+            
+            .background(RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0))
+            .foregroundColor(Color(red: 0.649, green: 0.807, blue: 0.883))
+            
+            
+            
+            
+        
+            VStack {
+                HStack{
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 23.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .topLeading)
+                NavigationLink(
+                        destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                        label:
+                            {
+                               
+                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(5)
+                                    .padding(.horizontal)
+                                
+                            })
+
+                    
+                    
+                    
+                    
+                }
+
+                
+            }
+            .padding(.leading, 50)
+            .padding(.all,25.0)
+            
+            .background(RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0))
+            .foregroundColor(Color(red: 0.649, green: 0.807, blue: 0.883))
+            
+        
         
         
     }
@@ -128,3 +187,4 @@ struct updates_Previews: PreviewProvider {
     }
 }
 
+}

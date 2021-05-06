@@ -38,10 +38,11 @@ struct travel: View {
             }
             Text("Chicago Domestic Travel Recommendation")
                 .font(.headline)
+                .frame(height: 50.0)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.leading)
-                .padding(.all, 30.0)
-                .frame(height: 50.0)
+                .padding(.horizontal)
+                
             
             
             NavigationLink(
@@ -55,13 +56,15 @@ struct travel: View {
             Spacer()
             Text("CDC International Travel Recommendations")
                 .font(.headline)
+                .frame(height: 50.0)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.leading)
-                .padding(.all, 30.0)
-                .frame(height: 50.0)
+                .padding(.horizontal)
+                
+                
             
             NavigationLink(
-                destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid-19/home/emergency-travel-order.html")!),
+                destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/travelers/map-and-travel-notices.html")!),
                 label: {Image("map3")
                     .resizable()
                     .scaledToFit()
