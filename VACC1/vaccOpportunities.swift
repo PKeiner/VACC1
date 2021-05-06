@@ -78,7 +78,7 @@ struct vaccOpportunities: View {
                     .frame(width: 100, height: 100, alignment: .leading)
                 
                 NavigationLink(
-                    destination: AppWebView(url:URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
+                    destination: AppWebView(url:URL(string:"https://abc7chicago.com/chicago-bar-village-tap-covid-vaccine-roscoe/9713123/")!),
                     label:
                         { Text("Dining").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
@@ -110,7 +110,7 @@ struct vaccOpportunities: View {
                     .frame(width: 100, height: 100, alignment: .leading)
                 
                 NavigationLink(
-                    destination: travel(),
+                    destination: AppWebView(url:URL(string: "https://www.nfl.com/news/nfl-providing-50-free-super-bowl-lvi-tickets-to-vaccinated-fans-as-part-of-globa")!),
                     label:
                         { Text("Sports").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
@@ -135,8 +135,8 @@ struct vaccOpportunities: View {
                     .frame(width: 100, height: 100, alignment: .leading)
                 
                 NavigationLink(
-                    destination: travel(),
-                    label:
+                    destination: AppWebView(url:URL(string: "https://www.nytimes.com/2021/04/13/well/family/parents-vaccinated-not-kids.html")!),
+                   label:
                         { Text("Kids ").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
                             
@@ -151,7 +151,7 @@ struct vaccOpportunities: View {
                     .frame(width: 100, height: 100, alignment: .leading)
                 
                 NavigationLink(
-                    destination: travel(),
+                    destination: AppWebView(url:URL(string:"https://blockclubchicago.org/2021/05/05/chicagos-new-summer-concert-series-is-only-open-to-fully-vaccinated-people/")!),
                     label:
                         { Text("Concerts ").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)

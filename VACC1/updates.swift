@@ -39,7 +39,7 @@ struct updates: View {
                         label:
                             {
                                
-                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                Text("Update 5/06/21- Johnson & Johnson is resumed")
                                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(5)
@@ -73,11 +73,11 @@ struct updates: View {
                 .scaledToFit()
                 .frame(width: 100, height: 100, alignment: .topLeading)
             NavigationLink(
-                    destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                    destination: AppWebView(url: URL(string:"https://www.nbcchicago.com/news/coronavirus/walgreens-launching-mobile-covid-vaccine-clinics-in-chicago/2500911/")!),
                     label:
                         {
                            
-                            Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                            Text("Update 5/03/21- Mobile COVID Vaccines Clinics")
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .multilineTextAlignment(.leading)
                                 .lineLimit(5)
@@ -104,11 +104,11 @@ struct updates: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100, alignment: .topLeading)
                 NavigationLink(
-                        destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
+                        destination: AppWebView(url: URL(string:"https://www.nytimes.com/2021/04/13/us/politics/johnson-johnson-vaccine-blood-clots-fda-cdc.html")!),
                         label:
                             {
                                
-                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
+                                Text("Update 4/13/21- Johnson & Johnson Vaccine Halted")
                                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(5)
@@ -143,8 +143,8 @@ struct updates: View {
                         label:
                             {
                                
-                                Text("Update 4/21/21- Johnson and Johnson Vaccine Approved for Use")
-                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                Text("Update 4/01/21- Three Vaccine options")
+                                    .foregroundColor(.blue)
                                     .multilineTextAlignment(.leading)
                                     .lineLimit(5)
                                     .padding(.horizontal)

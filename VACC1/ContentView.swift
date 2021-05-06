@@ -18,28 +18,78 @@ struct ContentView: View {
     }
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 5){
+            VStack(alignment: .center, spacing: 5){
                 
                 
                 Image("VACC2").edgesIgnoringSafeArea(.all)
                     .padding()
+                
+               
+                HStack{
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 23.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .topLeading)
+                Text("UPDATE")
+                    .font(.title)
+                Image("star")
+                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.all, 23.0)
+                    .scaledToFit()
+                    .frame(width: 100, height: 100, alignment: .topLeading)
+                    
+                  
+    
+                    
+                
+                }
+                VStack{
+                    
+                
+                HStack{
+                
+                NavigationLink(
+                        destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/vaccine-distribution-phases.html")!),
+                        label:
+                            {
+                               
+                                Text("4/19/21- All 16+ Chicagoans can get the Covid vaccine.")
+                                    .foregroundColor(.blue)
+                                    .frame(width: 260, height: 100)
+                                    .multilineTextAlignment(.leading)
+                                    .lineLimit(5)
+                                    .padding(.horizontal)
+                                
+                            })
+
+                }
+
+                }
+                .padding(.leading, 50)
+                .padding(.horizontal)
+                
+                .background(RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0))
+                .foregroundColor(Color(red: 0.649, green: 0.807, blue: 0.883))
+                
+                
+                
                 Spacer()
-                
-                Text("*All Chicagoans 16+ can receive the vaccine.*")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                Spacer() 
-                
+                VStack (alignment: .leading){
                 NavigationLink(
                     destination: Eligibility(),
                     label:
                         {
                             Image(systemName: "bandage")
-                                .font(.system(size: 50))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
                             Text("Vaccine Information")
+                                
                             
-                        })
+                        }).padding()
                 
                 
                 NavigationLink(
@@ -50,9 +100,9 @@ struct ContentView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 40, height: 40)
-                            Text("Locations").minimumScaleFactor(1.0)
+                            Text("Locations")
                             
-                        })
+                        }).padding()
                 
                 
                 
@@ -61,9 +111,11 @@ struct ContentView: View {
                     label:
                         {
                             Image(systemName:"exclamationmark.circle")
-                                .font(.system(size: 50))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
                             Text("Updates")
-                        })
+                        }).padding()
                 
                 
                 NavigationLink(
@@ -71,9 +123,11 @@ struct ContentView: View {
                     label:
                         {
                             Image(systemName:"globe")
-                                .font(.system(size: 50))
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
                             Text("Vaccinated Opportunities")
-                        })
+                        }).padding()
                 
                 Spacer()
             }.navigationBarTitle(Text(""),displayMode: .inline)
@@ -85,7 +139,7 @@ struct ContentView: View {
         .padding(.horizontal)
     }
 }
-
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
