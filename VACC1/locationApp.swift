@@ -18,7 +18,7 @@ struct locationApp: View {
             
                 HStack{
                     Image(systemName:"mappin")
-                        .font(.system(size: 50))
+                        .font(.system(size: 30))
                     
                 
               
@@ -56,7 +56,7 @@ struct locationApp: View {
                 VStack{
                 HStack (alignment: .center){
                     Image(systemName: "mappin")
-                        .font(.system(size: 50))
+                        .font(.system(size: 30))
                         .foregroundColor(.blue)
                         .padding(10.0)
                     
@@ -69,7 +69,6 @@ struct locationApp: View {
                             destination: cityVacc(),
                             label:
                                 {
-                                   
                                     Text("City Vaccine Sites")
                                         .foregroundColor(.blue).bold()
                                 })

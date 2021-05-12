@@ -46,10 +46,17 @@ struct updates: View {
                                     .padding(.horizontal)
                                 
                             })
+                    
+                        
+                    
 
                 }
 
                 
+                
+                
+                
+            
             }
             .padding(.leading, 50)
             .padding(.all,25.0)
@@ -77,7 +84,7 @@ struct updates: View {
                     label:
                         {
                            
-                            Text("Update 5/03/21- Mobile COVID Vaccines Clinics")
+                            Text("Update 5/03/21- Mobile COVID Vaccine Clinics")
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .multilineTextAlignment(.leading)
                                 .lineLimit(5)

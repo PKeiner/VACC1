@@ -50,7 +50,7 @@ struct cityVacc: View {
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                         .font(.body)
                         .fontWeight(.bold)
-                    Text("Drive Thru Only, ASL,ADA Assistance, ")
+                    Text("Drive Thru Only, ASL,ADA Assistance")
                 }).padding()
             
            
@@ -63,31 +63,37 @@ struct cityVacc: View {
                 destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/american-airlines-conference-center.html")!),
                 label: {
                     Text("American Airlines Conference Center")
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                        .font(.body)
                         .fontWeight(.bold)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     Text("Walk-Ins, ADA Assistance, ASL")
                 }).padding(.horizontal)
             
-            
+            Spacer()
+            VStack{
+                Text("Search by proximity.")
+                Text("Double Tap to Zoom In on Map")
+                
             SwiftUIWebView(url: URL(string: "https://data.cityofchicago.org/dataset/COVID-19-Vaccination-Locations-Map/4shi-izjg/embed?")!)
-                .padding(10)
-            
+//                .frame(width: 300, height:200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+               
+                
+               
             
             
             
             
             Spacer()
-            Text("Need More help? Contact a COVID-19 general inquiry line at 312.746.4835")
+            Text("Need More help? Contact a COVID-19 general inquiry line at: ")
               
-            
+                Link("(312)746-4835", destination: URL(string: "tel:3127464835")!)
             
             
             
             
        
-            
-        }.navigationBarTitle(Text(""),displayMode: .inline)
+            }
+        }
+        .navigationBarTitle(Text(""),displayMode: .inline)
         .padding(.horizontal)
         
     }
@@ -97,6 +103,7 @@ struct cityVacc: View {
     struct cityVacc_Previews: PreviewProvider {
         static var previews: some View {
             cityVacc()
+                .environment(\.sizeCategory, .large)
         }
     }
 }

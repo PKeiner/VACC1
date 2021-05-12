@@ -12,10 +12,7 @@ import AppDevWithSwiftLibrary
 
 struct Eligibility: View {
     
-    struct Zipcode: Hashable, Codable {
-        var location = UUID()
-        var zip = String()
-    }
+
     struct AppWebView: View {
         var url: URL!
         var body: some View {
@@ -32,7 +29,7 @@ struct Eligibility: View {
                     Image(systemName: "bandage")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50)
+                        .frame(width: 30)
                         .padding()
                         .cornerRadius(5.0)
                     ZStack {
@@ -59,8 +56,8 @@ struct Eligibility: View {
                             destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/expect.html")!),
                             label: {
                                 Text("Before Your Appointment")
-                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                    .font(.title2)
+                                    
+                                    .font(.title)
                             }).padding(.horizontal)
                         
                         
@@ -69,14 +66,14 @@ struct Eligibility: View {
                         
                     }
                    
-                    VStack(alignment: .center){
+                    VStack(alignment: .leading){
                         NavigationLink(
                             destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
                             label: {
                                 Text("Johnson and Johnson")
-                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                Text("1 shot")
-                                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                    .foregroundColor(.blue)
+                                Text("(1 shot)")
+                                    .foregroundColor(.blue)
                             }).padding()
                         
                         
@@ -84,12 +81,12 @@ struct Eligibility: View {
                         NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Moderna.html")!),
                                          label: {
                                             Text("Moderna").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                            Text("2 shots- 21 days apart").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                            Text("(2 shots- 28 days apart)").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                          }).padding()
                         NavigationLink(  destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/different-vaccines/Pfizer-BioNTech.html")!),
                                          label: {
                                             Text("Pfizer").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                            Text("2 shots- 21 days apart").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                            Text("(2 shots- 21 days apart)").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                             
                                          }).padding()
                         
@@ -105,7 +102,7 @@ struct Eligibility: View {
                         
                         
                     }
-                    .padding()
+                    .padding(.horizontal)
                 }
                 Spacer()
             }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
