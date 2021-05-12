@@ -147,5 +147,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
         ContentView()
             .environment(\.locale, Locale(identifier:"es"))
+        ContentView()
+            .environment(\.locale, Locale(identifier:"ko"))
+        
     }
 }

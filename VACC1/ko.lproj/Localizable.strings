@@ -1,0 +1,47 @@
+/* 
+  Localizable.strings
+  VACC1
+
+  Created by administrator on 4/25/21.
+  
+*/
+
+"Eligibility and Vaccine Information" = "자격 및 백신 정보";
+"Updates" = "업데이트";
+"Locations" = "위치";
+"Vaccinated Opportunities" = "백신 접종 기회";
+
+"Vaccine Information" = "백신 정보";
+"Before your Appointment" = "예약 전";
+"Johnson and Johnson is resumed" = "존슨과 존슨이 재개 됨";
+"Update" = "최신 정보";
+"Mobile COVID Vaccine Clinic" = "모바일 COVID 백신 클리닉";
+"Johnson and Johnson Vaccine Halted"= "존슨과 존슨 백신 중단";
+"Three Vaccine options" = "세 가지 백신 옵션";
+"Travel" = "여행";
+"5/11/21- COVID-19 vaccines for kids 12 to 15 begin at Chicago city-run sites Thursday; no appointment needed" = "5 / 11 / 21- 12 ~ 15 세 어린이를위한 COVID-19 백신은 목요일 시카고시에서 운영하는 사이트에서 시작됩니다. 예약 필요 없음";
+"(2 shots- 21 days apart)" = "(2 샷-21 일 간격)";
+"(2 shots- 28 days apart)" = "(2 샷-28 일 간격)";
+"(1 shot)" = "(1 샷)";
+"Update 5/06/21- Johnson & Johnson is resumed" = "업데이트 5 / 06 / 21- Johnson & Johnson이 재개 됨";
+"Update 5/03/21- Mobile COVID Vaccine Clinics" = "5/03/21 업데이트-모바일 COVID 백신 클리닉";
+"Update 4/13/21- Johnson & Johnson Vaccine Halted" = "업데이트 4 / 13 / 21- Johnson & Johnson 백신 중단";
+"Update 4/01/21- Three Vaccine options" = "4/01/21 업데이트-세 가지 백신 옵션";
+"CDC International Travel Recommendations" = "CDC 국제 여행 추천";
+"Chicago Domestic Travel Recommendation" = "시카고 국내 여행 추천";
+"Sports" ="스포츠";
+"Kids " = "키즈";
+"Concerts " = "콘서트";
+"Beauty " = "아름다움 ";
+"Dining" = "식사";
+"Drive Thru Only, ASL,ADA Assistance" = "드라이브 스루 전용, ASL, ADA 지원";
+"Walk-Ins, ADA Assistance, ASL" = "워크 인, ADA 지원, ASL";
+"Search by proximity." = "근접 검색";
+"Double Tap to Zoom In on Map" = "지도를 확대하려면 두 번 탭하세요.";
+"Need More help? Contact a COVID-19 general inquiry line at: " = "도움이 더 필요하세요? COVID-19 일반 문의 전화 :";
+"City Vaccine Sites" = "도시 백신 사이트";
+"Walk-Up" = "워크 업";
+"Johnson and Johnson" = "존슨 존슨";
+"Search by vaccine." = "백신으로 검색";
+"UPDATE" =  "최신 정보";
+"Before Your Appointment" = "예약 전";
