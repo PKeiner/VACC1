@@ -8,58 +8,54 @@
 import SwiftUI
 import AppDevWithSwiftLibrary
 
-  
+
 
 struct locationApp: View {
-   
-       
-        var body: some View {
-            VStack{
-            
-                HStack{
-                    Image(systemName:"mappin")
-                        .font(.system(size: 30))
-                    
+    
+    
+    var body: some View {
+        VStack(alignment: .leading){
+            //Page Header
+            HStack{
+                Image(systemName:"mappin")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                    .padding()
+                    .cornerRadius(5.0)
+                ZStack{
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(.blue)
+                        .frame(height: 40)
+                    //                   Image("header")
+                    Text("Locations")
+                        .foregroundColor(.white).bold()
+                }.padding(.horizontal)
                 
-              
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .foregroundColor(.blue)
-                            .frame(height: 40)
-     //                   Image("header")
-                        Text("Locations")
-                            .foregroundColor(.white).bold()
-                        
-                        
-                    }.padding(.horizontal)
-
-                    Spacer()
-                
-                  
-                    
-                    
+                Spacer()
             }
             
+            //Search by Vaccine Web link
             VStack {
                 Text("Search by vaccine.")
                     .font(.title2)
                 
-            SwiftUIWebView(url: URL(string: "https://www.vaccines.gov/search/")!)
-                .padding(10)
+                SwiftUIWebView(url: URL(string: "https://www.vaccines.gov/search/")!)
+                    .padding(10)
                 
                 
             }
             .padding()
-                
-                
-                VStack{
+            
+            //City Vaccine Site Button
+            VStack(alignment: .leading){
                 HStack (alignment: .center){
                     Image(systemName: "mappin")
-                        .font(.system(size: 30))
-                        .foregroundColor(.blue)
-                        .padding(10.0)
-                    
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
+                        .padding()
+                        .cornerRadius(5.0)
                     ZStack{
                         RoundedRectangle(cornerRadius: 5.0)
                             .foregroundColor(.yellow)
@@ -73,21 +69,21 @@ struct locationApp: View {
                                         .foregroundColor(.blue).bold()
                                 })
                         
-                            
+                        
                     }.padding(.horizontal)
                 }
-                }
-                Spacer()
-                
-                }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
-        }
+            }
+            Spacer()
+            
+        }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
     }
+}
 
-    struct locationApp_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+struct locationApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-    //https://data.cityofchicago.org/d/4shi-izjg
-    
+}
+
+
 

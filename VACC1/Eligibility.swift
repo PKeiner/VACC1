@@ -12,7 +12,7 @@ import AppDevWithSwiftLibrary
 
 struct Eligibility: View {
     
-
+    
     struct AppWebView: View {
         var url: URL!
         var body: some View {
@@ -20,7 +20,7 @@ struct Eligibility: View {
         }
     }
     
-    
+    //VStack of Vaccine Links
     var body: some View {
         VStack(alignment: .leading){
             VStack (alignment: .leading){
@@ -46,10 +46,10 @@ struct Eligibility: View {
                 
                 VStack(alignment: .center){
                     
-                
+                    
                     HStack{
                         
-                       
+                        
                         
                         
                         NavigationLink(
@@ -65,7 +65,7 @@ struct Eligibility: View {
                         
                         
                     }
-                   
+                    
                     VStack(alignment: .leading){
                         NavigationLink(
                             destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/vaccines/safety/JJUpdate.html")!),
@@ -95,7 +95,7 @@ struct Eligibility: View {
                         SwiftUIWebView(url: URL(string: "https://coronavirus.illinois.gov/s/vaccine-faqs")!)
                             .padding(10)
                         
-//
+                        //
                         
                         
                         

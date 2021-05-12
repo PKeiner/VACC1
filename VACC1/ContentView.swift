@@ -29,7 +29,7 @@ struct ContentView: View {
                     HStack(alignment: .center){
                         Image("star")
                             .resizable()
-//                            .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                            //                            .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                             .scaledToFit()
                             .padding()
                             
@@ -40,15 +40,15 @@ struct ContentView: View {
                             .font(.title)
                             .bold()
                             .multilineTextAlignment(.leading)
-//                            .frame(width: 150, height: 100, alignment: .center)
+                        //                            .frame(width: 150, height: 100, alignment: .center)
                         
                         Image("star")
                             .resizable()
-//                           .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
+                            //                           .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
                             .scaledToFit()
                             .padding()
                             .frame(height: 75)
-
+                        
                     }
                     
                     //Page navigation links
@@ -68,14 +68,12 @@ struct ContentView: View {
                                     
                                 }).padding(.leading)
                         
-                    }.navigationViewStyle(StackNavigationViewStyle())
-                    
+                    }.navigationViewStyle(StackNavigationViewStyle())   
                 }
                 
                 
                 .background(RoundedRectangle(cornerRadius: 20.0))
                 .foregroundColor(Color(red: 0.649, green: 0.807, blue: 0.883))
-                
                 
                 Spacer()
                 
@@ -89,8 +87,6 @@ struct ContentView: View {
                                     .scaledToFit()
                                     .frame(width: 40, height: 40)
                                 Text("Vaccine Information")
-                                
-                                
                             }).padding()
                     
                     
@@ -132,10 +128,8 @@ struct ContentView: View {
                             }).padding()
                     
                     Spacer()
+                    
                 }.navigationBarTitle(Text(""),displayMode: .inline)
-                
-                
-                
             }.navigationViewStyle(StackNavigationViewStyle())
             
             .padding(.horizontal)

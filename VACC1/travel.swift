@@ -16,33 +16,33 @@ struct travel: View {
     var body: some View {
         
         VStack {
-            VStack{
-                HStack{
-                    Image("opportunity")
-                        .padding(.horizontal)
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .foregroundColor(.blue)
-                            .frame(height: 40)
-     //                   Image("header")
-                        Text("Travel")
-                            .foregroundColor(.white).bold()
-                        
-                        
-                    }.padding(.horizontal)
-                    
-                }
+            //page header
+            HStack{
+                Image("opportunity")
+                    .padding(.horizontal)
                 
+                ZStack{
+                    RoundedRectangle(cornerRadius: 5.0)
+                        .foregroundColor(.blue)
+                        .frame(height: 40)
+                    //                   Image("header")
+                    Text("Travel")
+                        .foregroundColor(.white).bold()
+                    
+                    
+                }.padding(.horizontal)
                 
             }
+            
+            // Tap the image to view the swift webview
+            
             Text("Chicago Domestic Travel Recommendation")
                 .font(.headline)
                 .frame(height: 50.0)
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal)
-                
+            
             
             
             NavigationLink(
@@ -60,8 +60,6 @@ struct travel: View {
                 .foregroundColor(.blue)
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal)
-                
-                
             
             NavigationLink(
                 destination: AppWebView(url: URL(string:"https://www.cdc.gov/coronavirus/2019-ncov/travelers/map-and-travel-notices.html")!),
@@ -70,21 +68,18 @@ struct travel: View {
                     .scaledToFit()
                 }).padding()
             
-            
-            
-            
             Spacer()
             
-          
-            }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
-        }
+            
+        }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
+    }
+}
+
+struct travel_Previews: PreviewProvider {
+    static var previews: some View {
+        travel()
     }
     
-    struct travel_Previews: PreviewProvider {
-        static var previews: some View {
-            travel()
-        }
-        
-        
-    }
+    
+}
 

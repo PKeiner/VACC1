@@ -8,23 +8,24 @@
 import SwiftUI
 import AppDevWithSwiftLibrary
 
-    struct AppWebView: View {
+struct AppWebView: View {
+    
+    //Allows various linked web pages to appear on this page
+    var url: URL!
+    var body: some View {
         
-        var url: URL!
-        var body: some View {
-             
-            VStack{
+        VStack{
             SwiftUIWebView(url: url)
-                
-            }
+            
         }
     }
-    
+}
+
 struct AppWebView_Previews: PreviewProvider {
     static var previews: some View {
         AppWebView()
     }
 }
 
-        
- 
+
+

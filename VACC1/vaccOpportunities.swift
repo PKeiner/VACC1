@@ -12,14 +12,16 @@ struct vaccOpportunities: View {
     var body: some View {
         
         
-        VStack{
+        VStack(alignment: .leading){
+            //Page Header
             HStack (alignment: .center){
                 
                 Image(systemName:"globe")
-                    .font(.system(size: 50))
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30)
                     .padding()
-                
-                
+                    .cornerRadius(5.0)
                 
                 ZStack{
                     
@@ -28,17 +30,18 @@ struct vaccOpportunities: View {
                         .frame(height: 50)
                         .padding()
                     
-//                    Image("header")
+                    //                    Image("header")
                     Text("Vaccinated Opportunities")
                         .foregroundColor(.white).bold()
+                    
                 }.padding(.horizontal)
-            }
+            }.padding(.horizontal)
             
             
             Spacer()
+            
+            //Stack of Web Navigation linked opportunities. 
             VStack {
-                
-                
                 HStack {
                     Image("star")
                         .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0))
@@ -60,12 +63,6 @@ struct vaccOpportunities: View {
                     //                            VStack {
                     
                 }
-                
-                
-                
-                
-                
-                
             }
             
             
@@ -82,7 +79,7 @@ struct vaccOpportunities: View {
                     label:
                         { Text("Dining").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
-                          
+                            
                             
                             
                         })
@@ -136,7 +133,7 @@ struct vaccOpportunities: View {
                 
                 NavigationLink(
                     destination: AppWebView(url:URL(string: "https://www.nytimes.com/2021/04/13/well/family/parents-vaccinated-not-kids.html")!),
-                   label:
+                    label:
                         { Text("Kids ").foregroundColor(.blue).lineLimit(3)
                             .frame(width: 150)
                             
@@ -158,7 +155,7 @@ struct vaccOpportunities: View {
                             
                         })
             }
-
+            
             
             HStack {
                 Image("star")
@@ -189,7 +186,7 @@ struct vaccOpportunities: View {
             
             
             
-        Spacer()
+            Spacer()
         }.navigationBarTitle(Text(""),displayMode: NavigationBarItem.TitleDisplayMode.inline)
         
         

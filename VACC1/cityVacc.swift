@@ -11,7 +11,7 @@ struct cityVacc: View {
     var body: some View {
         
         VStack(alignment: .leading){
-            
+//Page Header
             HStack (alignment: .center){
                 Image(systemName: "person.3.fill")
                     .padding(10.0)
@@ -27,8 +27,8 @@ struct cityVacc: View {
                 
                 Spacer()
             }
-                     
             
+//City Location Navigation Links
             NavigationLink(
                 destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/chicago-state.html")!),
                 label: {
@@ -41,6 +41,7 @@ struct cityVacc: View {
                     Text("Walk-Up")
                     
                 }).padding(.horizontal)
+            
             Spacer()
             
             NavigationLink(
@@ -53,12 +54,8 @@ struct cityVacc: View {
                     Text("Drive Thru Only, ASL,ADA Assistance")
                 }).padding()
             
-           
-            
-            
-            
-            
             Spacer()
+            
             NavigationLink(
                 destination: AppWebView(url: URL(string:"https://www.chicago.gov/city/en/sites/covid19-vaccine/home/american-airlines-conference-center.html")!),
                 label: {
@@ -69,28 +66,31 @@ struct cityVacc: View {
                 }).padding(.horizontal)
             
             Spacer()
+            
+//Search by proximity- iFrame Embedded Map
             VStack{
                 Text("Search by proximity.")
                 Text("Double Tap to Zoom In on Map")
                 
-            SwiftUIWebView(url: URL(string: "https://data.cityofchicago.org/dataset/COVID-19-Vaccination-Locations-Map/4shi-izjg/embed?")!)
-//                .frame(width: 300, height:200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-               
+                SwiftUIWebView(url: URL(string: "https://data.cityofchicago.org/dataset/COVID-19-Vaccination-Locations-Map/4shi-izjg/embed?")!)
+                //                .frame(width: 300, height:200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
-               
-            
-            
-            
-            
-            Spacer()
-            Text("Need More help? Contact a COVID-19 general inquiry line at: ")
-              
+                
+                
+                
+                
+                
+                
+                Spacer()
+//Help Text with clickable phone link
+                Text("Need More help? Contact a COVID-19 general inquiry line at: ")
+                
                 Link("(312)746-4835", destination: URL(string: "tel:3127464835")!)
-            
-            
-            
-            
-       
+                
+                
+                
+                
+                
             }
         }
         .navigationBarTitle(Text(""),displayMode: .inline)
